@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #fff9f2;
+    color: #333;
+}
+
+/* Navigation */
+header nav {
+    background-color: #000;
+    padding: 0.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.other:hover {
+    color: #dddd16;
+}
+
+.logo {
+    font-size: 1.5rem;
+    color: #dddd16;
+}
+
+.home {
+    color: #dddd16;
+}
+
+/* Bannière */
+.hero {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+
+.services {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    color: #000000fb;
+    font-weight: bold;
+    background-color: #e2e0bf;
+    padding: 40px;
+}
+
+#titre-catalogue {
+    margin-top: 100px;
+    margin-bottom: 90px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.catalogue {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.plat {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.plat p , .oplat p{
+    font-weight: bold;
+}
+
+h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.plat:hover {
+    transform: translateY(-5px);
+}
+
+.plat img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Section Plats du jour */
+.plats_du_jour {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.oplat {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.oplat:hover {
+    transform: translateY(-5px);
+}
+
+.oplat img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    border: 3px solid #dddd16;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        height: 200px;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .services {
+        margin: 50px 0;
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+
+    #titre-catalogue {
+        margin: 60px 0;
+        font-size: 1.3rem;
+    }
+
+    .catalogue, .plats_du_jour {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .plat img, .oplat img {
+        height: 150px;
+    }
+
+    .oplat img {
+        width: 150px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul {
+        gap: 0.3rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    header nav a {
+        font-size: 0.9rem;
+    }
+
+    .services, #titre-catalogue {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .catalogue, .plats_du_jour {
+        grid-template-columns: 1fr;
+    }
+
+    .plat img, .oplat img {
+        height: auto;
+        max-height: 150px;
+    }
+
+    .oplat img {
+        width: 120px;
+    }
+}
